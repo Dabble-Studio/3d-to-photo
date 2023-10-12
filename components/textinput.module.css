@@ -1,0 +1,14 @@
+.textInput {
+    width: 380px;
+    overflow: hidden;
+    height: 100px;
+    resize: none;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.textInputContainer {
+    width: 400px;
+}

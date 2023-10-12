@@ -1,0 +1,176 @@
+
+.page {
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inputPanel{
+    background-color: rgb(255, 255, 255);
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.resultsPanel {
+    flex: 2;
+
+}
+
+.contentPanel{
+    background-color: rgb(169, 169, 169);
+    width: 70%;
+    height: 100vh;
+    margin-top: 10px;
+}
+
+.mainImageContainer{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin-bottom: 10px;    
+}
+
+.imageContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(215, 215, 215);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: grey;
+}
+
+.dragAndDropText{
+    max-width: 50%;
+    line-height: 1.6rem;
+}
+
+.maskImageContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(59, 32, 113, 0);
+    height: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: height 0.2s ease-in;
+    z-index: 10;
+}
+
+.flashingProgressContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(59, 32, 113, 0);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 15;
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0% {
+      background-color: transparent;
+    }
+    50% {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+
+.resultsImageContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(59, 32, 113, 0);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.slideDown {
+    height: 400px;
+}
+
+.maskDisplayContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(70, 232, 83);
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.imageWrapper {
+    background-color: rgb(188, 216, 207);
+    width: 45%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    margin: 10px;
+}
+
+.imageResultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.generateButton{
+    width: 40%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgb(255, 200, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.startNewButton{
+    width: 40%;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.buttonContainer {
+    position: relative;
+    width: 400px;
+    display: flex;
+    
+    justify-content: space-between;
+
+}
+
