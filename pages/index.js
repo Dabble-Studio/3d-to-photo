@@ -78,7 +78,7 @@ export default function Studio(){
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            prompt: promptText + ", photorealistic, high resolution product photography",
+            prompt: promptText + ", photorealistic, high resolution product photography, don't modify product",
             negative_prompt: "blurry, painting, cartoon, abstract, ugly, deformed",
             image: image,
             mask: mask,
