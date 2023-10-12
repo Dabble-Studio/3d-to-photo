@@ -13,7 +13,7 @@ function TextInput({ onTextChange }) {
   return (
     <div className={styles.textInputContainer}>
       
-      <textarea id="text-input" wrap="soft" type="text" value={text} onChange={handleTextChange} className={styles.textInput} placeholder='Describe your scene here...'/>
+      <textarea id="text-input" wrap="soft" type="text" value={text} onChange={handleTextChange} className={styles.textInput} placeholder='Describe where the item should be placed. e.g. "in the grass", or "on the moon"'/>
     </div>
   );
 }

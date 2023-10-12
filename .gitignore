@@ -32,3 +32,4 @@ yarn-error.log*
 .vercel
 
 /image_proc_server/__pycache__
+image_proc_server/imgproc/
