@@ -20,13 +20,13 @@ def get_item_mask():
     image = Image.open(io.BytesIO(image_bytes))
 
     image = image.convert('RGBA')
-    image.save('input.png')
+    #image.save('input.png')
 
     jpeg_buffer = io.BytesIO()
 
     ai_mask_image = convert_to_black_and_white(image)
 
-    ai_mask_image.save("output.png")
+    #ai_mask_image.save("output.png")
     ai_mask_image = ai_mask_image.convert('RGB')
     ai_mask_image.save(jpeg_buffer, format="JPEG")
     ai_mask_image_base64 = base64.b64encode(jpeg_buffer.getvalue()).decode('utf-8')
