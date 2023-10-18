@@ -1,38 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 3D to Photo
 
-## Getting Started
+3D to Photo is an open-source package by Dabble, that combines threeJS and Stable diffusion to build a virtual photo studio for product photography. Load a 3D model into the browser and virtual shoot it in any kind of scene you can imagine. The app currently uses Stable Diffusion 1.5-inpainting, hosted on Replicate.
 
-First, run the development server:
+## How it Works
+* Upload a 3D model of any object in .glb format.
+* Adjust the position and orientation of the model on the canvas
+* Describe the scene you want to create in the text box and click generate image
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Use Cases
+* Product Photography: Create product lifestyle photos in any backdrop you can imagine, without a physical photoshoot.
+* Synthetic Data Generation: Generate synthetic images of an item in a variety of scenes. Useful when training object detection models.
+* Previsualize Game Assets: Upload your game assets and generate level art around it to previsualize scenes.
+
+## Tech Stack
+* [ThreeJS](https://threejs.org) to handle loading and viewing 3D models
+* Stable Diffusion 1.5 (inpainting) by [stability.ai](https://stability.ai/)
+* [Replicate](https://replicate.com/) to run Stable Diffusion
+* [NextJS](https://nextjs.org/) by Vercel for the front-end
+* Python Flask Server for some backend image processing functions
+
+## Install and Run
+
+1. Clone this repository
+```
+git clone git@github.com:Dabble-Studio/3d-to-photo.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install neccessary packages for the front end
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+cd 3d-to-photo
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3. Install neccessary packages for the python backend
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+cd image_proc_server
+pip install -r requirements.txt
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. Run the Flask Server
+```
+flask run
+```
 
-## Learn More
+5. Set your Replicate API key. In another terminal, navigate to the root folder and create a file called .env. You can use the .env.example file as a template. Paste your Replicate API key in this line REPLICATE_API_TOKEN=YOUR_API_TOKEN, in place of YOUR_API_TOKEN
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+6. Run the NextJS app
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+7. Use one of the sample 3D models and drag it into the upload area. Enter a prompt in the text box and click "Generate Image"
