@@ -2,7 +2,11 @@
 
 3D to Photo is an open-source package by Dabble, that combines threeJS and Stable diffusion to build a virtual photo studio for product photography. Load a 3D model into the browser and virtual shoot it in any kind of scene you can imagine. The app currently uses Stable Diffusion 1.5-inpainting, hosted on Replicate.
 
+[Demo Video](https://www.youtube.com/watch?v=P3yPn92v3u8)
+
 [![3D Photo to Studio Demo](https://i.imgur.com/opwbcT9.jpg)](https://www.youtube.com/watch?v=iv-iOJDvtvc)
+
+
 
 ## How it Works
 * Upload a 3D model of any object in .glb format.
