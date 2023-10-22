@@ -32,14 +32,14 @@
 git clone git@github.com:Dabble-Studio/3d-to-photo.git
 ```
 
-2. Install neccessary packages for the front end
+2. Install necessary packages for the front end
 
 ```
 cd 3d-to-photo
 npm install
 ```
 
-3. Install neccessary packages for the python backend
+3. Install necessary packages for the python backend
 
 ```
 cd image_proc_server
