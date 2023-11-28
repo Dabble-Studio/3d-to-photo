@@ -25,6 +25,10 @@
 * [NextJS](https://nextjs.org/) by Vercel for the front-end
 * Python Flask Server for some backend image processing functions
 
+## Pre-requisites
+
+Get a Replicate API key from [Replicate](https://replicate.com/). You can use the free tier for this project.
+
 ## Install and Run
 
 1. Clone this repository
