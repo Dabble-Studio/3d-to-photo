@@ -24,7 +24,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-dropzone": "^14.2.3",
-    "sharp": "^0.32.6",
     "styled-components": "^5.3.9",
     "three": "^0.151.3"
   }
